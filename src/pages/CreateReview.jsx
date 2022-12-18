@@ -71,7 +71,7 @@ const CreateBook = () => {
 						type="number"
 						placeholder="Enter review rating"
 						name="rating"
-						value={formData.number}
+						value={formData.rating}
 						onChange={changeHandler}
 					/>
 

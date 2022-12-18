@@ -19,10 +19,10 @@ const Button = ({ buttonName, buttonFunction, book, review }) => {
 			navigate('/reviews', { state: { book } });
 
 		if (buttonFunction === 'editReview')
-		 	navigate('/edit-review', {state:{book, review}});
+		 	navigate('/edit-review', {state:{review}});
 
 		if (buttonFunction === 'deleteReview')
-		 	navigate('/delete-review', {state:{book, review}});
+		 	navigate('/delete-review', {state:{review}});
 		
 		if(buttonFunction === 'createReview')
 			navigate('/create-review', {state:{book} });

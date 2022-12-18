@@ -30,8 +30,8 @@ const Review = ({ review }) => {
 			<p>{bookRating}</p>
 			<label>Book Genre:</label>
 			<p>{genre}</p>
-			<Button buttonName="Edit" buttonFunction="Edit" />
-			<Button buttonName="Delete" buttonFunction="Delete" />
+			<Button buttonName="Edit" buttonFunction="editReview" review={review}/>
+			<Button buttonName="Delete" buttonFunction="deleteReview" review={review}/>
 		</section>
 	);
 };
