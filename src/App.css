@@ -31,6 +31,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 3;
 }
 
 header nav {
@@ -66,10 +67,18 @@ nav img {
   /* aspect-ratio: 1 / 1; */
 }
 
+nav ul .menu {
+  display: none;
+}
+
+.hamburger-icon {
+  font-size: 30px!important
+}
+
 main {
   background-color: #f7c1d8;
   width: 100%;
-  height: 75%;
+  min-height: 75%;
 }
 
 .home, .reviews { padding-top: 20px;}
@@ -98,14 +107,14 @@ main {
 }
 
 button {
-  width: 50px;
-  height: 30px;
+  width: 70px;
+  height: 40px;
   background-color: #a8738e;
   color: #271602;
   border: none;
   outline: none;
   font-weight: bold;
-  font-size: 0.6rem;
+  font-size: 0.9rem;
   padding: 5px;
   border-radius: 5px;
   cursor: pointer;
@@ -118,6 +127,36 @@ button[disabled]{
   color: #666666;
   cursor: not-allowed;
   pointer-events: all !important;
+}
+
+button:hover {
+  background-color: #d891b6;
+  transition: .5s;
+}
+
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+button:hover span {
+  padding-right: 10px;
+}
+
+button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
 .form {
@@ -184,4 +223,59 @@ footer span {
 
 footer p {
   padding-left: 5px;
+}
+
+.hamburgir-menu {
+  position: absolute;
+  width: 100%;
+  background-color: green;
+  z-index: 2;
+  transition: 0s !important;
+  opacity: 0;
+}
+
+.active-hamburger {
+  opacity: 0 !important;
+}
+
+.hamburgir-menu .link {
+  width: 100%;
+  padding: 15px;
+  background-color: #a8738e;
+  transition: .5s;
+}
+/* style={{ display: displayHamburger ? "block" : "none" }}*/
+
+.hamburgir-menu .link:hover {
+  background-color: #e09bbf;
+  transition: .5s;
+}
+
+.hamburgir-menu .link a {
+  text-decoration: none;
+  color: #271602;
+  font-weight: bold;
+  user-select: none;
+}
+
+
+@media screen and (max-width: 1000px) {
+  nav ul a {display: none;}
+  nav ul .menu {
+    display: block;
+    padding: 30px;
+  }
+
+  .hamburgir-menu {
+    position: absolute;
+    width: 100%;
+    background-color: green;
+    z-index: 2;
+    transition: .25s;
+    opacity: 0;
+  }
+  
+  .active-hamburger {
+    opacity: 1 !important;
+  }
 }

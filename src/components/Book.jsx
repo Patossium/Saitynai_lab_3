@@ -2,6 +2,7 @@ import Button from './Button';
 
 const Book = ({ book }) => {
 	const { id, name, author, genre, rating } = book;
+	
 
 	return (
 		<section className="book">
