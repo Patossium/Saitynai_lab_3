@@ -47,7 +47,7 @@ const CreateBook = () => {
 				config,
 			);
 
-			navigate('/reviews');
+			navigate('/reviews', { state: { book } });
 		} catch (err) {
 			console.log(err);
 		}
@@ -68,10 +68,10 @@ const CreateBook = () => {
 						onChange={changeHandler}
 					/>
 					<input
-						type="text"
+						type="number"
 						placeholder="Enter review rating"
 						name="rating"
-						value={formData.rating}
+						value={formData.number}
 						onChange={changeHandler}
 					/>
 

@@ -18,8 +18,14 @@ const Button = ({ buttonName, buttonFunction, book, review }) => {
 		if (buttonFunction === 'showReviews')
 			navigate('/reviews', { state: { book } });
 
-		if (buttonFunction === 'editReview') navigate('/edit-review');
-		if (buttonFunction === 'deleteReview') navigate('/delete-review');
+		if (buttonFunction === 'editReview')
+		 	navigate('/edit-review', {state:{book, review}});
+
+		if (buttonFunction === 'deleteReview')
+		 	navigate('/delete-review', {state:{book, review}});
+		
+		if(buttonFunction === 'createReview')
+			navigate('/create-review', {state:{book} });
 	};
 	return (
 		<button disabled={token === ''} onClick={buttonAction}>

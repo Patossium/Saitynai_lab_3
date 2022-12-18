@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Review from '../components/Review';
+import Button from '../components/Button';
 
 const Home = () => {
 	const [data, setData] = useState({
@@ -30,7 +31,7 @@ const Home = () => {
 		<Review key={review.id} review={review} />
 	));
 
-	return <main className="reviews">{reviewList}</main>;
+	return <main className="reviews"><Button buttonName="Create review" buttonFunction="createReview" book={state.book} />{reviewList}</main>;
 };
 
 export default Home;

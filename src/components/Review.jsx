@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Button from './Button';
 
 const Review = ({ review }) => {
@@ -8,6 +9,8 @@ const Review = ({ review }) => {
 		rating,
 		book: { id: bookId, name, author, rating: bookRating, genre },
 	} = review;
+
+	const navigate = useNavigate()
 
 	return (
 		<section className="review">
