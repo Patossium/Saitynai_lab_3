@@ -107,7 +107,7 @@ main {
 }
 
 button {
-  width: 70px;
+  width: 100px;
   height: 40px;
   background-color: #a8738e;
   color: #271602;
@@ -231,11 +231,11 @@ footer p {
   background-color: green;
   z-index: 2;
   transition: 0s !important;
-  opacity: 0;
+  display: none;
 }
 
 .active-hamburger {
-  opacity: 0 !important;
+  display: none;
 }
 
 .hamburgir-menu .link {
@@ -272,10 +272,10 @@ footer p {
     background-color: green;
     z-index: 2;
     transition: .25s;
-    opacity: 0;
+    display: none;
   }
   
   .active-hamburger {
-    opacity: 1 !important;
+    display: block;
   }
 }
