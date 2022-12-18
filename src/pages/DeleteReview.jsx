@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
 
@@ -35,6 +35,10 @@ const DeleteReview = () => {
 			console.log(err);
 		}
 	};
+
+	useEffect(() => {
+		submitHandler();
+	}, [])
 	return (
 		<main>
 			<section className="form">

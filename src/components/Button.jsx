@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 import MyContext from '../context/MyContext';
 
-const Button = ({ disable = false, buttonName, buttonFunction, book, review }) => {
+const Button = ({ buttonName, buttonFunction, book, review }) => {
 	const navigate = useNavigate();
 
 	const { token } = useContext(MyContext);
@@ -28,7 +28,7 @@ const Button = ({ disable = false, buttonName, buttonFunction, book, review }) =
 			navigate('/create-review', {state:{book} });
 	};
 	return (
-		<button disabled={token === '' || disable === true} onClick={buttonAction}>
+		<button disabled={token === ''} onClick={buttonAction}>
 			<span>{buttonName}</span>
 		</button>
 	);

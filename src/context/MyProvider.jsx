@@ -2,7 +2,7 @@ import { useState } from 'react';
 import MyContext from './MyContext';
 
 const MyProvider = ({ children }) => {
-	const [token, setToken] = useState('');
+	const [token, setToken] = useState({});
 	const [credentials, setCredentials] = useState({ userName: '', role: '' });
 
 	const logout = () => setToken('');

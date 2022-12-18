@@ -107,7 +107,7 @@ main {
 }
 
 button {
-  width: 100px;
+  width: 70px;
   height: 40px;
   background-color: #a8738e;
   color: #271602;
@@ -258,6 +258,31 @@ footer p {
   user-select: none;
 }
 
+.modal {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  user-select: none;
+}
+
+.modal-container {
+  margin: auto;
+  width: 200px;
+  height: 150px;
+  background: #e59dc3;
+}
+
+.modal-description {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.modal-buttons {
+  width: 100%;
+}
 
 @media screen and (max-width: 1000px) {
   nav ul a {display: none;}

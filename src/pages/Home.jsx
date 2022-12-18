@@ -15,7 +15,7 @@ const Home = () => {
 			.catch((error) => {
 				setData({ results: null, loading: false, error });
 			});
-	}, []);
+	});
 
 	if (data.error) return;
 	if (data.loading) return;

@@ -71,7 +71,7 @@ const Nav = () => {
 						</NavLink>
 					)}
 
-					<div className='menu' onClick={toggleHamburgerMenu}><i class="fa fa-bars hamburger-icon"></i></div>
+					<div className='menu' onClick={toggleHamburgerMenu}><i className="fa fa-bars hamburger-icon"></i></div>
 				</ul>
 			</nav>
 			
